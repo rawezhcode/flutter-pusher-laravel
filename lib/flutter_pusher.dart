@@ -71,13 +71,13 @@ class FlutterPusher {
     PusherOptions options, {
     bool lazyConnect = false,
     bool enableLogging = false,
-    void Function(ConnectionError)? onError,
-    void Function(ConnectionStateChange)? onConnectionStateChange,
+    required void Function(ConnectionError) onError,
+    required void Function(ConnectionStateChange) onConnectionStateChange,
   })  : assert(appKey != null),
         assert(options != null) {
     _instanceId = _instances++;
-    _onError = onError!;
-    _onConnectionStateChange = onConnectionStateChange!;
+    _onError = onError;
+    _onConnectionStateChange = onConnectionStateChange;
     _init(appKey, options, enableLogging: enableLogging);
     if (!lazyConnect) {
       connect(
@@ -205,8 +205,8 @@ class PusherClient extends FlutterPusher {
     PusherOptions options, {
     bool lazyConnect = false,
     bool enableLogging = false,
-    void Function(ConnectionError)? onError,
-    void Function(ConnectionStateChange)? onConnectionStateChange,
+    required void Function(ConnectionError) onError,
+    required void Function(ConnectionStateChange) onConnectionStateChange,
   }) : super(
           appKey,
           options,
