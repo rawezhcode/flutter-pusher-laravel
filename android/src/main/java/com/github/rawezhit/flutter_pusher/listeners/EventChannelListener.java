@@ -1,4 +1,4 @@
-package com.github.rawezhit.flutter_pusher_laravel.listeners;
+package com.github.rawezhit.flutter_pusher.listeners;
 
 import android.os.Handler;
 import android.util.Log;
@@ -12,8 +12,8 @@ import java.util.Map;
 
 import org.json.JSONObject;
 
-import static com.github.rawezhit.flutter_pusher_laravel.FlutterPusherPlugin.TAG;
-import static com.github.rawezhit.flutter_pusher_laravel.FlutterPusherPlugin.eventSink;
+import static com.github.rawezhit.flutter_pusher.FlutterPusherPlugin.TAG;
+import static com.github.rawezhit.flutter_pusher.FlutterPusherPlugin.eventSink;
 
 public class EventChannelListener implements ChannelEventListener {
     static final String SUBSCRIPTION_SUCCESS_EVENT = "pusher:subscription_succeeded";

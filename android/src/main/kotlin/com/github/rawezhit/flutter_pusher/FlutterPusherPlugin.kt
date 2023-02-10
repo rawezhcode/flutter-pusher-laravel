@@ -1,4 +1,4 @@
-package com.github.rawezhit.flutter_pusher_laravel
+package com.github.rawezhit.flutter_pusher
 
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
@@ -10,7 +10,7 @@ class FlutterPusherPlugin: MethodCallHandler {
   companion object {
     @JvmStatic
     fun registerWith(registrar: Registrar) {
-      val channel = MethodChannel(registrar.messenger(), "flutter_pusher_laravel")
+      val channel = MethodChannel(registrar.messenger(), "flutter_pusher")
       channel.setMethodCallHandler(FlutterPusherPlugin())
     }
   }

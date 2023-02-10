@@ -1,11 +1,11 @@
-package com.github.rawezhit.flutter_pusher_laravel;
+package com.github.rawezhit.flutter_pusher;
 
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
-import com.github.rawezhit.flutter_pusher_laravel.listeners.EventChannelListener;
-import com.github.rawezhit.flutter_pusher_laravel.listeners.PresenceChannelListener;
-import com.github.rawezhit.flutter_pusher_laravel.listeners.PrivateChannelListener;
+import com.github.rawezhit.flutter_pusher.listeners.EventChannelListener;
+import com.github.rawezhit.flutter_pusher.listeners.PresenceChannelListener;
+import com.github.rawezhit.flutter_pusher.listeners.PrivateChannelListener;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.pusher.client.Pusher;
@@ -25,8 +25,8 @@ import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.github.rawezhit.flutter_pusher_laravel.FlutterPusherPlugin.TAG;
-import static com.github.rawezhit.flutter_pusher_laravel.FlutterPusherPlugin.eventSink;
+import static com.github.rawezhit.flutter_pusher.FlutterPusherPlugin.TAG;
+import static com.github.rawezhit.flutter_pusher.FlutterPusherPlugin.eventSink;
 
 public class PusherInstance implements MethodChannel.MethodCallHandler {
 

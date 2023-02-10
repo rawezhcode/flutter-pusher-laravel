@@ -1,4 +1,4 @@
-package com.github.rawezhit.flutter_pusher_laravel.platform_messages;
+package com.github.rawezhit.flutter_pusher.platform_messages;
 
 import java.util.Collections;
 import java.util.Map;

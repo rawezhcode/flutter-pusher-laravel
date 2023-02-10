@@ -1,4 +1,4 @@
-package com.github.rawezhit.flutter_pusher_laravel.platform_messages;
+package com.github.rawezhit.flutter_pusher.platform_messages;
 
 public class BindInstanceMessage extends InstanceMessage {
     private String eventName;

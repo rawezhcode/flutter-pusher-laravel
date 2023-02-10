@@ -1,7 +1,7 @@
-package com.github.rawezhit.flutter_pusher_laravel;
+package com.github.rawezhit.flutter_pusher;
 
 import android.util.Log;
-import com.github.rawezhit.flutter_pusher_laravel.platform_messages.InstanceMessage;
+import com.github.rawezhit.flutter_pusher.platform_messages.InstanceMessage;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import io.flutter.plugin.common.EventChannel;

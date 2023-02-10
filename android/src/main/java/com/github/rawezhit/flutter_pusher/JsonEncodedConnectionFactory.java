@@ -1,4 +1,4 @@
-package com.github.rawezhit.flutter_pusher_laravel;
+package com.github.rawezhit.flutter_pusher;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;

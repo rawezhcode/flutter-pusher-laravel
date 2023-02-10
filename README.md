@@ -1,4 +1,4 @@
-# flutter_pusher_laravel
+# flutter_pusher
 
 A new Flutter project.
 

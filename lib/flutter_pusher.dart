@@ -4,7 +4,7 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-part 'flutter_pusher_laravel.g.dart';
+part 'flutter_pusher.g.dart';
 
 enum PusherConnectionState {
   CONNECTING,
@@ -152,8 +152,8 @@ class FlutterPusher {
       _socketId = await _channel.invokeMethod(
           'getSocketId', jsonEncode({'instanceId': _instanceId}));
       if (_onConnectionStateChange != null) {
-        _onConnectionStateChange(message.connectionStateChange as ConnectionStateChange);
-        
+        _onConnectionStateChange(
+            message.connectionStateChange as ConnectionStateChange);
       }
     } else if (message.isConnectionError) {
       if (_onError != null) {

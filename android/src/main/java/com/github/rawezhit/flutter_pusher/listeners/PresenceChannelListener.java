@@ -1,4 +1,4 @@
-package com.github.rawezhit.flutter_pusher_laravel.listeners;
+package com.github.rawezhit.flutter_pusher.listeners;
 
 import com.pusher.client.channel.PresenceChannelEventListener;
 import com.pusher.client.channel.User;
