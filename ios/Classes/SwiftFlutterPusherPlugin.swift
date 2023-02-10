@@ -11,10 +11,10 @@ public class SwiftFlutterPusherPlugin: NSObject, FlutterPlugin {
     public static func register(with registrar: FlutterPluginRegistrar) {
         let channel = FlutterMethodChannel(name: "com.github.rawezhit/pusher", binaryMessenger: registrar.messenger())
         let instance = SwiftFlutterPusherPlugin()
-        // let eventChannel = FlutterEventChannel(name: "com.github.heywhy/pusherStream", binaryMessenger: registrar.messenger())
+        let eventChannel = FlutterEventChannel(name: "com.github.rawezhit/pusherStream", binaryMessenger: registrar.messenger())
 
         registrar.addMethodCallDelegate(instance, channel: channel)
-        // eventChannel.setStreamHandler(StreamHandler())
+        eventChannel.setStreamHandler(StreamHandler())
     }
 
     private func getPusherInstance(instanceId: String?) -> PusherInstance {

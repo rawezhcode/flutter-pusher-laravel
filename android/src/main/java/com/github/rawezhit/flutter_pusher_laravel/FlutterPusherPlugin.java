@@ -30,20 +30,20 @@ public class FlutterPusherPlugin implements MethodCallHandler {
      */
     public static void registerWith(Registrar registrar) {
         final MethodChannel channel = new MethodChannel(registrar.messenger(), "com.github.rawezhit/pusher");
-        // final EventChannel eventStream = new EventChannel(registrar.messenger(), "com.github.rawezhit/pusherStream");
+        final EventChannel eventStream = new EventChannel(registrar.messenger(), "com.github.rawezhit/pusherStream");
 
         channel.setMethodCallHandler(new FlutterPusherPlugin());
-        // eventStream.setStreamHandler(new EventChannel.StreamHandler() {
-        //     @Override
-        //     public void onListen(Object args, final EventChannel.EventSink eventSink) {
-        //         FlutterPusherPlugin.eventSink = eventSink;
-        //     }
+        eventStream.setStreamHandler(new EventChannel.StreamHandler() {
+            @Override
+            public void onListen(Object args, final EventChannel.EventSink eventSink) {
+                FlutterPusherPlugin.eventSink = eventSink;
+            }
 
-        //     @Override
-        //     public void onCancel(Object args) {
-        //         Log.d(TAG, String.format("onCancel args: %s", args != null ? args.toString() : "null"));
-        //     }
-        // });
+            @Override
+            public void onCancel(Object args) {
+                Log.d(TAG, String.format("onCancel args: %s", args != null ? args.toString() : "null"));
+            }
+        });
     }
 
     @Override
